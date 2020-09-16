@@ -7,10 +7,8 @@ private const val TAG = "MainActivity"
 
 class PointsViewModel : ViewModel() {
 
-//    private val teamA = Team("TeamA")
-//    private val teamB = Team("TeamB")
-    private val teamA = Team()
-    private val teamB = Team()
+    private val teamA = Team("TeamA")
+    private val teamB = Team("TeamB")
 
     val getAPoints: Int
         get() = teamA.points
@@ -18,15 +16,9 @@ class PointsViewModel : ViewModel() {
     val getBPoints: Int
         get() = teamB.points
 
-    fun setPoints(points: Int, teamName: String?) {
-        when(teamName) {
-            "TeamA" -> teamA.points = points
-            "TeamB" -> teamB.points = points
-            else -> {
-                teamA.points = points
-                teamB.points = points
-            }
-        }
+    fun resetPoints() {
+        teamA.points = 0
+        teamB.points = 0
     }
 
     fun add3Points(team: String) {

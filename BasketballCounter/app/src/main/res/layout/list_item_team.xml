@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp">
+
+    <TextView
+        android:id="@+id/game_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Game Title"
+        android:textColor="@color/crimson"/>
+
+    <TextView
+        android:id="@+id/game_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Game Date"
+        android:textColor="@color/crimson"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginRight="8dp">
+
+            <TextView
+                android:id="@+id/teamAName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Team A Name"
+                android:textColor="@color/crimson"/>
+
+            <TextView
+                android:id="@+id/teamAFinal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Team A Final"
+                android:textColor="@color/crimson"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginLeft="8dp">
+            <TextView
+                android:id="@+id/teamBName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Team B Name"
+                android:textColor="@color/crimson"/>
+
+            <TextView
+                android:id="@+id/teamBFinal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Team B Final"
+                android:textColor="@color/crimson"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>
