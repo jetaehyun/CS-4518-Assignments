@@ -1,73 +1,112 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:padding="8dp">
+    android:layout_height="wrap_content">
+
+
+    <ImageView
+        android:id="@+id/winningMark"
+        android:layout_width="51dp"
+        android:layout_height="69dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.507" />
+
 
     <TextView
         android:id="@+id/game_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginRight="25dp"
         android:text="Game Title"
-        android:textColor="@color/crimson"/>
+        android:textColor="@color/crimson"
+        app:layout_constraintEnd_toStartOf="@+id/game_date"
+        app:layout_constraintHorizontal_bias="0.109"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/game_date"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="8dp"
         android:text="Game Date"
-        android:textColor="@color/crimson"/>
+        android:textColor="@color/crimson"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/game_title"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/teamAName"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center">
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="21dp"
+        android:layout_marginEnd="76dp"
+        android:layout_marginRight="76dp"
+        android:text="Team A Name"
+        android:textColor="@color/crimson"
+        app:layout_constraintEnd_toStartOf="@+id/teamBName"
+        app:layout_constraintHorizontal_bias="0.952"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/game_title" />
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:gravity="center"
-            android:layout_marginRight="8dp">
+    <TextView
+        android:id="@+id/teamAFinal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="68dp"
+        android:layout_marginLeft="68dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="20dp"
+        android:text="Team A Final"
+        android:textColor="@color/crimson"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/teamBFinal"
+        app:layout_constraintHorizontal_bias="0.105"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/teamAName"
+        app:layout_constraintVertical_bias="0.0" />
 
-            <TextView
-                android:id="@+id/teamAName"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Team A Name"
-                android:textColor="@color/crimson"/>
+    <TextView
+        android:id="@+id/teamBName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="56dp"
+        android:layout_marginRight="56dp"
+        android:text="Team B Name"
+        android:textColor="@color/crimson"
+        app:layout_constraintEnd_toStartOf="@+id/winningMark"
+        app:layout_constraintTop_toBottomOf="@+id/game_date" />
 
-            <TextView
-                android:id="@+id/teamAFinal"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Team A Final"
-                android:textColor="@color/crimson"/>
+    <TextView
+        android:id="@+id/teamBFinal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="96dp"
+        android:layout_marginRight="96dp"
+        android:layout_marginBottom="20dp"
+        android:text="Team B Final"
+        android:textColor="@color/crimson"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/winningMark"
+        app:layout_constraintTop_toBottomOf="@+id/teamBName"
+        app:layout_constraintVertical_bias="0.0" />
 
-        </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:gravity="center"
-            android:layout_marginLeft="8dp">
-            <TextView
-                android:id="@+id/teamBName"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Team B Name"
-                android:textColor="@color/crimson"/>
-
-            <TextView
-                android:id="@+id/teamBFinal"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Team B Final"
-                android:textColor="@color/crimson"/>
-        </LinearLayout>
-
-    </LinearLayout>
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -38,7 +38,6 @@ class SaveScoreActivity : AppCompatActivity() {
         saveScoreATextView.setText(teamAScore.toString())
 
         confirmScoreButton.setOnClickListener {
-            Log.d(TAGSAVE, "setResult() is called")
             setConfirmation(true)
         }
 
@@ -55,7 +54,6 @@ class SaveScoreActivity : AppCompatActivity() {
     companion object {
         fun newIntent(packageContext: Context, teamAScore: Int, teamBScore: Int): Intent {
             return Intent(packageContext, SaveScoreActivity::class.java).apply {
-                Log.d(TAGSAVE, "newIntent(), putExtra() has been called")
                 putExtra(TEAMASCORES, teamAScore)
                 putExtra(TEAMBSCORES, teamBScore)
             }
